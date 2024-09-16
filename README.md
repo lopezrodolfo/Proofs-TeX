@@ -8,7 +8,7 @@ Rodolfo Lopez
 
 ## Date
 
-May 2022
+March 2023
 
 ## Setup (macOS)
 

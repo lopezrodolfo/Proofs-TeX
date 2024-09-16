@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{How to Prove Mathematical Statements}
+\author{Rodolfo Lopez}
+\date{March 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In mathematics, a statement is a proposition that is either true or false. Proofs are used to establish whether a statement is true or false. We will discuss four particularly important methods of proof: direct proof, proof by contrapositive, proof by contradiction, and proof by induction. In this exposition, we will discuss and provide examples of each of these methods. 
+
+\section{Direct Proof}
+
+A direct proof is arguably the simplest and most common method of proof. It involves showing that an if-then statement is true by providing a logical chain of reasoning from the premises to the conclusion. The basic structure of a direct proof is as follows:
+
+\begin{enumerate}
+\item State the hypothesis or premise of the statement to be proved.
+\item State any definitions or axioms that are relevant.
+\item Use logical reasoning to deduce the conclusion from the premises and definitions.
+\item State the conclusion and conclude the proof.
+\end{enumerate}
+
+\noindent\textbf{Example 1.} Prove that if $a$ and $b$ are odd integers, then $a+b$ is even.
+
+\noindent\textbf{Solution:}
+\begin{enumerate}
+\item Let $a$ and $b$ be odd integers.
+\item By definition, an odd integer can be written as $2n+1$, where $n$ is an integer.
+\item So, we can write $a=2n_1+1$ and $b=2n_2+1$ for some integers $n_1$ and $n_2$.
+\item Therefore, $a+b=2n_1+1+2n_2+1=2(n_1+n_2+1)$, which is even by definition.
+\item Hence, if $a$ and $b$ are odd integers, then $a+b$ is even.
+\end{enumerate}
+
+In this example, we used direct proof to show that the sum of two odd integers is even. We started by assuming that $a$ and $b$ are odd integers and used logical reasoning to show that $a+b$ is even.
+
+\section{Proof by Contrapositive}
+
+A proof by contrapositive is a proof that establishes the truth of an if-then statement by proving the truth of its contrapositive. The contrapositive of an if-then statement is formed by negating both the hypothesis and the conclusion and reversing the direction of the implication. The basic structure of a proof by contrapositive is as follows:
+
+\begin{enumerate}
+\item State the contrapositive of the statement to be proved.
+\item Assume the negated conclusion is true.
+\item Use direct proof to show that the negated hypothesis must also be true.
+\end{enumerate}
+
+\noindent\textbf{Example 2.} Prove that if $n$ is an integer and $n^2$ is even, then $n$ is even.
+
+\noindent\textbf{Solution:}
+
+\begin{enumerate}
+\item The contrapositive of the statement is: If $n$ is an odd integer, then $n^2$ is odd.
+\item Assume that $n$ is an odd integer.
+\item By definition, an odd integer can be written as $2k+1$, where $k$ is an integer.
+\item So, $n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$ is odd
+\item Hence, if $n$ is an odd integer, then $n^2$ is odd.
+\item By proving the contrapositive, we have shown that if $n^2$ is even, then $n$ must be even.
+\end{enumerate}
+
+In this example, we used proof by contrapositive to show that if $n^2$ is even, then $n$ must be even. We started by assuming that $n$ is an odd integer, and then used direct proof to show that $n^2$ must be odd. This, in turn, proved the contrapositive of the original statement.
+
+\section{Proof by Contradiction}
+
+A proof by contradiction is a proof that establishes the truth of a statement by assuming its negation and then deriving a contradiction. The basic structure of a proof by contradiction is as follows:
+
+\begin{enumerate}
+\item Assume the negation of the statement to be proved.
+\item Use logical reasoning to derive a contradiction.
+\item Conclude that the original statement must be true.
+\end{enumerate}
+
+\noindent\textbf{Example 3.} Prove that $\sqrt{2}$ is irrational.
+
+\noindent\textbf{Solution:}
+\begin{enumerate}
+\item Assume that $\sqrt{2}$ is rational, i.e., it can be expressed as a fraction in lowest terms, $\sqrt{2}=\frac{p}{q}$, where $p$ and $q$ are integers with no common factors.
+\item Squaring both sides of the equation, we get $2=\frac{p^2}{q^2}$.
+\item Multiplying both sides by $q^2$, we get $2q^2=p^2$.
+\item Since $p^2$ is even, $p$ must be even. [by Example 2]
+\item Let $p=2k$ for some integer $k$.
+\item Substituting this into the previous equation, we get $2q^2=(2k)^2=4k^2$, which implies that $q^2=2k^2$.
+\item Since $q^2$ is even, $q$ must also be even. [by Example 2]
+\item But this contradicts our assumption that $p$ and $q$ have no common factors, since they are both even.
+\item Therefore, our assumption that $\sqrt{2}$ is rational must be false, and $\sqrt{2}$ is irrational.
+\end{enumerate}
+
+In this example, we used proof by contradiction to show that $\sqrt{2}$ is irrational. We assumed that $\sqrt{2}$ is rational and then derived a contradiction by showing that $p$ and $q$ cannot both be even if they have no common factors. This proved that our initial assumption was false, and hence $\sqrt{2}$ must be irrational.
+
+\section{Proof by Induction}
+
+A proof by induction is a method of proof that establishes the truth of a statement for all natural numbers (or all integers greater than some fixed integer) by proving it for a base case and then showing that if the statement is true for some integer $n$, then it must also be true for $n+1$. The basic structure of a proof by induction is as follows:
+
+\begin{enumerate}
+\item Prove the statement for a base case (usually $n=1$ or $n=0$).
+\item Assume that the statement is true for $n=k$.
+\item Show that it must also be true for $n=k+1$.
+\item Conclude that the statement is true for all natural numbers $n$.
+\end{enumerate}
+
+\noindent\textbf{Example 4.} Prove that for all natural numbers $n$, $1+2+3+\cdots+n=\frac{n(n+1)}{2}$.
+
+\noindent\textbf{Solution:}
+\begin{enumerate}
+\item Base case: When $n=0$, the left-hand side of the equation is $1$, and the right-hand side is $\frac{1(1+1)}{2}=1$. Therefore, the statement is true for $n=1$.
+\item Assume that the statement is true for $n=k$, i.e., $1+2+3+\cdots+k=\frac{k(k+1)}{2}$.
+\item Consider the case when $n=k+1$. We have:
+\begin{align*}
+1+2+3+\cdots+k+(k+1) &= \frac{k(k+1)}{2}+(k+1) \
+&= \frac{k(k+1)+2(k+1)}{2} \
+&= \frac{(k+1)(k+2)}{2} \
+&= \frac{(k+1)((k+1)+1)}{2}.
+\end{align*}
+\item This shows that if the statement is true for $n=k$, then it must also be true for $n=k+1$.
+\item Therefore, by the principle of mathematical induction, the statement is true for all natural numbers $n$.
+\end{enumerate}
+
+In this example, we used proof by induction to show that the formula for the sum of the first $n$ natural numbers, $1+2+3+\cdots+n=\frac{n(n+1)}{2}$, is true for all natural numbers $n$. We first proved the base case for $n=1$, and then assumed that the formula is true for $n=k$. Using this assumption, we showed that the formula must also be true for $n=k+1$. This completed the induction step, and we concluded that the formula is true for all natural numbers $n$.
+
+\end{document}
